@@ -7,10 +7,16 @@ fun! LspLocationList()
     " lua vim.lsp.diagnostic.set_loclist({open_loclist = false})
 endfun
 
-nnoremap <leader>vd :lua vim.lsp.buf.definition()<CR>
-nnoremap <leader>vi :lua vim.lsp.buf.implementation()<CR>
+nnoremap <leader>gd :lua vim.lsp.buf.definition()<CR>
+nnoremap <leader>gD :lua vim.lsp.buf.declaration()<CR>
+nnoremap <leader>grr :lua vim.lsp.buf.references()<CR>
+nnoremap <leader>gi :lua vim.lsp.buf.implementation()<CR>
+"nnoremap <silent>K :lua vim.lsp.buf.hover()<CR>
+
+nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
+
+
 nnoremap <leader>vsh :lua vim.lsp.buf.signature_help()<CR>
-nnoremap <leader>vrr :lua vim.lsp.buf.references()<CR>
 nnoremap <leader>vrn :lua vim.lsp.buf.rename()<CR>
 nnoremap <leader>vh :lua vim.lsp.buf.hover()<CR>
 nnoremap <leader>vca :lua vim.lsp.buf.code_action()<CR>

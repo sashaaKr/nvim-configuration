@@ -12,6 +12,7 @@ set wildignore+=**/ios/*
 set wildignore+=**/.git/*
 
 call plug#begin('~/.vim/plugged')
+Plug 'hrsh7th/nvim-compe'
 Plug 'glepnir/dashboard-nvim'
 
 " Yes, I am a sneaky snek now
@@ -72,12 +73,14 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 Plug 'wakatime/vim-wakatime'
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 
 lua require("theprimeagen")
 lua require("dashboard")
+lua require("lsp")
+lua require("compe-config")
 lua require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
 
 let mapleader = " "
@@ -96,4 +99,3 @@ nnoremap <Leader>l :wincmd l<CR>
 let NERDTreeShowHidden = 1
 let NERDTreeQuitOnOpen = 1
 let NERDTreeMinimalUI = 1
-
