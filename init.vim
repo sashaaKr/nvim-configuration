@@ -76,6 +76,7 @@ call plug#end()
 
 
 lua require("theprimeagen")
+lua require("dashboard")
 lua require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
 
 let mapleader = " "
