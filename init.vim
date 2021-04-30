@@ -12,6 +12,7 @@ set wildignore+=**/ios/*
 set wildignore+=**/.git/*
 
 call plug#begin('~/.vim/plugged')
+"Plug 'ray-x/lsp_signature.nvim'
 Plug 'hrsh7th/nvim-compe'
 Plug 'glepnir/dashboard-nvim'
 
@@ -82,6 +83,9 @@ lua require("dashboard")
 lua require("lsp")
 lua require("compe-config")
 lua require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
+
+autocmd BufEnter * lua require'completion'.on_attach()
+
 
 let mapleader = " "
 

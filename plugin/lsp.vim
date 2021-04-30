@@ -3,9 +3,9 @@
 set completeopt=menuone,noinsert,noselect
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 
-fun! LspLocationList()
+"fun! LspLocationList()
     " lua vim.lsp.diagnostic.set_loclist({open_loclist = false})
-endfun
+"endfun
 
 nnoremap <leader>gd :lua vim.lsp.buf.definition()<CR>
 nnoremap <leader>gD :lua vim.lsp.buf.declaration()<CR>
@@ -24,7 +24,7 @@ nnoremap <leader>vsd :lua vim.lsp.util.show_line_diagnostics(); vim.lsp.util.sho
 nnoremap <leader>vn :lua vim.lsp.diagnostic.goto_next()<CR>
 nnoremap <leader>vll :call LspLocationList()<CR>
 
-augroup THE_PRIMEAGEN_LSP
-    autocmd!
-    autocmd! BufWrite,BufEnter,InsertLeave * :call LspLocationList()
-augroup END
+"augroup THE_PRIMEAGEN_LSP
+"    autocmd!
+"    autocmd! BufWrite,BufEnter,InsertLeave * :call LspLocationList()
+"augroup END
