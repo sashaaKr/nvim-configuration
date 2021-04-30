@@ -12,6 +12,7 @@ set wildignore+=**/ios/*
 set wildignore+=**/.git/*
 
 call plug#begin('~/.vim/plugged')
+Plug 'glepnir/dashboard-nvim'
 
 " Yes, I am a sneaky snek now
 Plug 'ambv/black'
@@ -94,3 +95,5 @@ nnoremap <Leader>l :wincmd l<CR>
 let NERDTreeShowHidden = 1
 let NERDTreeQuitOnOpen = 1
 let NERDTreeMinimalUI = 1
+
+let g:dashboard_default_executive ='telescope'
