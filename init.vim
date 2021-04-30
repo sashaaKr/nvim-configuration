@@ -77,6 +77,7 @@ call plug#end()
 
 
 lua require("theprimeagen")
+lua require("dashboard")
 lua require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
 
 let mapleader = " "
@@ -96,4 +97,3 @@ let NERDTreeShowHidden = 1
 let NERDTreeQuitOnOpen = 1
 let NERDTreeMinimalUI = 1
 
-let g:dashboard_default_executive ='telescope'
