@@ -1,6 +1,9 @@
 local nvim_lsp = require("lspconfig")
 
-nvim_lsp.tsserver.setup {}
+nvim_lsp.tsserver.setup {
+}
+
+
 nvim_lsp.bashls.setup {}
 nvim_lsp.pyright.setup {}
 -- pip install cmake-language-server

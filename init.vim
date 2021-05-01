@@ -12,6 +12,7 @@ set wildignore+=**/ios/*
 set wildignore+=**/.git/*
 
 call plug#begin('~/.vim/plugged')
+Plug 'mhinz/vim-startify'
 "Plug 'ray-x/lsp_signature.nvim'
 Plug 'hrsh7th/nvim-compe'
 Plug 'glepnir/dashboard-nvim'
