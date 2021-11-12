@@ -11,7 +11,17 @@ set wildignore+=**/android/*
 set wildignore+=**/ios/*
 set wildignore+=**/.git/*
 
+" For vim wiki
+set nocompatible
+filetype plugin on
+syntax on
+
+set cursorline
+
 call plug#begin('~/.vim/plugged')
+Plug 'vimwiki/vimwiki'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'ryanoasis/vim-devicons'
 Plug 'mhinz/vim-startify'
 "Plug 'ray-x/lsp_signature.nvim'
 Plug 'hrsh7th/nvim-compe'
@@ -104,3 +114,12 @@ nnoremap <Leader>l :wincmd l<CR>
 let NERDTreeShowHidden = 1
 let NERDTreeQuitOnOpen = 1
 let NERDTreeMinimalUI = 1
+
+let g:NERDTreeFileExtensionHighlightFullName = 1
+let g:NERDTreeExactMatchHighlightFullName = 1
+let g:NERDTreePatternMatchHighlightFullName = 1
+
+
+set termguicolors     " enable true colors support
+let ayucolor="dark"   " for dark version of theme
+colorscheme ayu

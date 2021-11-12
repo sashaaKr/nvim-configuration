@@ -42,6 +42,7 @@ let g:startify_lists = [
         \]
 let g:startify_bookmarks = [
             \ { 'd': '~/Lemonade/devops' },
+            \ { 'l': '~/Lemonade/lmnd-cli' },
             \ { 'i': '~/.config/nvim/init.vim' },
             \ { 'z': '~/.zshrc' },
             \ '~/Lemonade/dev-workflow-service',
